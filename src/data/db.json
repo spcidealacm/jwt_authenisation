@@ -3,17 +3,24 @@
     {
       "id": 1,
       "name": "Raymond",
-      "age": 30
+      "age": 20
     },
     {
       "id": 2,
       "name": "Emily",
-      "age": 28
+      "age": 40
     },
     {
       "id": 3,
       "name": "Petter",
       "age": 33
+    }
+  ],
+  "auth": [
+    {
+      "name": "Raymond",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmF5bW9uZCIsImlhdCI6MTY1MzcwMzk5Nn0.d3TE51XXfXhEvoaM13KOuj_Xaezh1u-UprNiuNDLLvk",
+      "id": 1
     }
   ]
 }

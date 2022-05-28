@@ -1,4 +1,6 @@
 const JWT = require('jsonwebtoken')
+const { generateAccessToken, generateRefreshToken } = require('./auth')
+const axios = require('axios')
 
 const login = (req, res) => {
   /**
@@ -7,12 +9,15 @@ const login = (req, res) => {
   const username = req.body.username
   const user = { name: username }
 
-  const accessToken = JWT.sign(
-    user,
-    process.env.ACCESS_SECRET
-  )
+  const accessToken = generateAccessToken(user, '20s')
+  const refreshToken = generateRefreshToken(user)
+  axios.post(process.env.DATA_ADDRESS + "/auth", {
+    name: username, token: refreshToken
+  }).catch(err => {
+    console.log(err);
+  })
 
-  res.json({ accessToken: accessToken })
+  res.json({ accessToken, refreshToken })
 }
 
 module.exports = { login }

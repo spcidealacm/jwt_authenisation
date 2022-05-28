@@ -6,8 +6,28 @@ Content-TYpe: application/json
 }
 
 ###
+POST http://192.168.1.2:9090/login
+Content-TYpe: application/json
+
+{
+  "username": "Emily"
+}
+
+###
+POST http://192.168.1.2:9090/token
+Content-TYpe: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmF5bW9uZCIsImlhdCI6MTY1MzcwMzk5Nn0.d3TE51XXfXhEvoaM13KOuj_Xaezh1u-UprNiuNDLLvk"
+}
+
+###
 GET http://192.168.1.2:9090/user_info
 
 ###
 GET http://192.168.1.2:9090/user_info
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmF5bW9uZCIsImlhdCI6MTY1MzY5NjQ1NX0.m0EOCqKOXNrJgK3k00RGenJynZ42ePluW2C9a36sMiU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmF5bW9uZCIsImlhdCI6MTY1MzcwNDA0MSwiZXhwIjoxNjUzNzA0MDYxfQ.TuieUeJlUV12RY0DDruqYERWNoxgD559ZevUFhjImwM
+
+###
+GET http://192.168.1.2:9190/user_info
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRW1pbHkiLCJpYXQiOjE2NTM2OTc3Njd9.GycfKG-QsvZXx5rfLYnHtMe_bsODC4s7PcMxfn-T6Yc

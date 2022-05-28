@@ -22,6 +22,10 @@ const port = process.env.PORT || 6060
 const { login } = require('./src/login')
 app.post('/login', login)
 
+/** Token */
+const { token } = require("./src/token")
+app.post('/token', token)
+
 /** UserInfo */
 const { user_info } = require('./src/userInfo')
 const { authenticate_token } = require('./src/auth')

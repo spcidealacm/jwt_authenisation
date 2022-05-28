@@ -1,8 +1,9 @@
 {
   "scripts": {
     "server": "nodemon server.js",
+    "server2": "nodemon server2.js",
     "token": "node genToken.js",
-    "dataServer": "json-server ./src/data/db.json --port 1200"
+    "dataServer": "json-server --watch ./src/data/db.json --port 1200"
   },
   "dependencies": {
     "axios": "^0.27.2",
